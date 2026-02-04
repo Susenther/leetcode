@@ -8,12 +8,10 @@ class Solution{
             count[c - 'a']++;
          }
          for(char c : s.toCharArray()){
+            if(count[c - 'a'] == 0){
+                return false;
+            }
             count[c - 'a']--;
-         
-
-         if(count[c - 'a'] < 0){
-            return false;
-         }
         }
          return true;
     }
